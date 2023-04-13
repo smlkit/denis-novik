@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "GilroyBold";
+  src: url("fonts/Gilroy-Bold.woff") format('woff');
+  font-weight: bold;
+}
+  
+@font-face {
+  font-family: "GilroyMedium";
+  src: url("fonts/Gilroy-Medium.woff") format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: GilroyMedium;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #828282;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* navigation */
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 30px 0 30px 0;
+  border-bottom: #828282 1px solid;
+
+  color: #828282;
+}
+
+nav a {
+  transition: all .5s ease-out;
+}
+
+.open-btn {
+  display: none;
+}
+
+.mobile-navigation {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  z-index: 10;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.active {
+  color: black;
+}
+
+/* header */
+
+header {
+  margin: 40px 0 40px 0;
+}
+
+header img {
+  width: 100%;
+  margin-bottom: 104px;
+}
+
+.mobile-img {
+  display: none;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 47.34px;
+  line-height: 58.6px;
+  font-family: GilroyBold;
+}
+
+.lang {
+  color: #828282;
+
+  transform: rotate(-90deg);
+  margin-right: -23px;
+
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+
+  /* IE */
+  -ms-transform: rotate(-90deg);
+
+  /* Opera */
+  -o-transform: rotate(-90deg);
+
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.mobile-lang {
+  color: #828282;
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: 170px;
+  right: -7%;
+}
+
+.mobile-lang span {
+  font-family: GilroyBold;
+  font-size: 34px;
+}
+
+/* about me */
+
+.about-me {
+  text-align: center;
+  padding: 120px 0 70px 0;
+}
+
+.about-me h2 {
+  margin-bottom: 17.6px;
+}
+
+.about-me p {
+  margin-bottom: 40px;
+}
+
+.grey-bg {
+  background-color: #f6f6f6;
+}
+
+.article-header {
+  font-family: GilroyBold;
+  font-size: 34px;
+}
+
+/* skills */
+
+.skills {
+  text-align: center;
+}
+
+.skills h2 {
+  margin: 92px 0 69px 0;
+}
+
+.skills > p {
+  margin-bottom: 83.5px;
+}
+
+.programs-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+
+.program-name {
+  font-size: 14px;
+  color: #828282;
+  margin: 24px 0 40px 0;
+}
+
+/* portfolio */
+
+.portfolio {
+  text-align: center;
+  padding: 113px 0 96px 0;
+}
+
+.portfolio h2 {
+  padding-bottom: 47px;
+}
+
+.project p {
+  padding-top: 45px;
+  margin-bottom: 99px;
+  text-decoration: underline;
+}
+
+.project p:last-child {
+  padding-bottom: 0;
+}
+
+/* contacts */
+
+.contacts {
+  text-align: center;
+  padding: 114px 0 123px 0;
+}
+
+.contacts h2 {
+  margin-bottom: 20px;
+}
+
+.contacts button {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-family: GilroyBold;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  transition: all .5s ease-out;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 46px;
+}
+
+.socials-text {
+  color: #828282;
+  font-size: 14px;
+}
+
+@media(max-width: 414px) {
+  .wrapper {
+    width: 90%;
+    position: relative;
+  }
+
+  /* navigation */
+  .pc-navigation {
+    display: none;
+  }
+
+  .open-btn {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+  }
+
+  .mobile-navigation {
+    padding-left: 20px;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+  }
+
+  .mobile-navigation img {
+    position: absolute;
+    top: 60px;
+    left: 330px;
+  }
+
+  .mobile-navigation ul li a {
+    font-size: 34px;
+    font-family: GilroyBold;
+  }
+
+  nav ul {
+    flex-direction: column;
+    border: none;
+    gap: 67px;
+  }
+
+  .lang {
+    display: none;
+  }
+
+  /* header */
+  .info {
+    flex-direction: column;
+    align-items: start;
+    gap: 23px;
+  }
+
+  .mobile-img {
+    display: block;
+  }
+
+  .pc-img {
+    display: none;
+  }
+
+  /* skills */
+  .programs-container {
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  /* portfolio */
+  .portfolio img {
+    width: 90%;
+  }
+
+  /* contacts */
+  button {
+    width: 100%;
+  }
+
+  .socials-text {
+    font-size: 18px;
+  }
+}
